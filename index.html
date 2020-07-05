@@ -1,64 +1,158 @@
 <!DOCTYPE html>
 
 
+<style>
+ body {
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+ }
+ main {
+     flex: 1 0 auto;
+}
+
+
+</style>
+
 <head>
 <title>
     DSA Quick Reference 
 </title>
-<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
 </head>
 
 <body>
+    <main>
     <h1> DSA Quick Reference </h1>
-    <p>
-        Click on lecture button for dropdown. Click on the link (Lecture 1..14) to open that lecture's pdf in a new window
-    </p>
-        <button class="collapsible"><a  target="_blank" rel="noopener noreferrer" href = http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture01.pdf> Lecture 1 </a></button>
-        <div class="content">
-        <button class="collapsible"><h2>Abstract data type definition<h2></h2></button>
-        <div class="content">
-
-        </div>
-
-
-        <button class="collapsible"><h2>Pseudocode</h2></button>
-        <button class="collapsible"><h2>Complexity definititions/calculations</h2></button>
-        <div class="content">
-            <p>
-                Each simple operation (+, -, *, /, =, if, function call) takes
-one time step/unit.
-            </p>
-        <p>
-            T(n) = the number of steps 
-        </p>
-        We are not interested in the exact number of steps for a given
-        algorithm, we are interested in its order of growth (i.e., how
-        does the number of steps change if the value of n increases)
-            <h3> O notation</h3>
-            <p>
-The O-notation provides an asymptotic <b>upper</b> bound for a
-function: for all values of n (to the right of n0) the value of
-the function f (n) is on or below c · g(n)
-            </p>
-            <b>f(n) ∈ O(g(n)) if lim n→∞ f(n)/g(n) is 0 or a constant (but not ∞) </b>
-           
-            <h3> Ω-notation </h3>
-            <p>
-                The Ω-notation provides an asymptotic <b>lower</b> bound for a
-function: for all values of n (to the right of n0) the value of
-the function f (n) is on or above c · g(n)
-            </p>
-           <b>f(n) ∈ Ω(g(n)) if lim n→∞  f(n)/g(n) is ∞ or a nonzero constant.</b> 
-       
-        </div>
-
-
-
-</div>
     
-    <a href= "http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture02.pdf"> Lecture 2 </a>
+    <ul class ="browser-default">
+        Don't worry, every page opens in a new tab from this site. 
+        <li>
+            Click on the link (Lecture 1..14) to open that lecture's pdf.
+        </li>
+        <li>
+            Click on a topic, to open a pdf directly where that topic begins. 
+        </li>
+        <li>
+            Click the dropdown to get short summary on this site.
+        </li>
+    </ul>
 
+    <p>
+        If a collapsible doesn't work, reopen the top level collapsible thingy. Sorry my javascript sucks :C
+    </p>
+
+
+    <ul class="collapsible">
+        <!-- Lecture 1-->
+        <li> 
+           <div class="collapsible-header">
+                <a  target="_blank" rel="noopener noreferrer" href = http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture01.pdf> Lecture 1 </a> 
+                    (ADT definition, Pseudocode, complexity definitions calculations)
+            </div>
+            <div class="collapsible-body"><span>
+                <ul class="collapsible popout">
+                    <!-- ADT definition -->
+                    <li>
+                        <div class="collapsible-header"><h2>Abstract data type definitions</h2></div>
+                        <div class="collapsible-body"><span>
+                            <p> asd test</p>
+                        </span></div>
+                    </li>
+                    <!-- Pseudocode -->
+                    <li>
+                        <div class="collapsible-header"><h2>Pseudocode</h2></div>
+                        <div class="collapsible-body"><span>
+                            <p> asd test</p>
+                        </span></div>
+                    </li>
+                    <!-- Complexity definitions/calculations-->
+                    <li>
+                        <div class="collapsible-header"><a  target="_blank" rel="noopener noreferrer" href="http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture01.pdf#page=48"><h2>Complexity definititions/calculations</a></h2></div>
+                        <div class="collapsible-body"><span>
+                                <p>
+                                        Each simple operation (+, -, *, /, =, if, function call) takes
+                            one time step/unit.
+                                        </p>
+                                    <p>
+                                        T(n) = the number of steps 
+                                    </p>
+                                    We are not interested in the exact number of steps for a given
+                                    algorithm, we are interested in its order of growth (i.e., how
+                                    does the number of steps change if the value of n increases)
+                                        <h3> O notation</h3>
+                                        <p>
+                            The O-notation provides an asymptotic <b>upper</b> bound for a
+                            function: for all values of n (to the right of n0) the value of
+                            the function f (n) is on or below c · g(n)
+                                        </p>
+                                        <b>f(n) ∈ O(g(n)) if lim n→∞ f(n)/g(n) is 0 or a constant (but not ∞) </b>
+                                       
+                                        <h3> Ω-notation </h3>
+                                        <p>
+                                            The Ω-notation provides an asymptotic <b>lower</b> bound for a
+                            function: for all values of n (to the right of n0) the value of
+                            the function f (n) is on or above c · g(n)
+                                        </p>
+                                       <b>f(n) ∈ Ω(g(n)) if lim n→∞  f(n)/g(n) is ∞ or a nonzero constant.</b> 
+
+
+                                       <h3>Θ-notation</h3>
+                                       <p>
+                                        The Θ-notation provides an asymptotically <b>tight</b> bound for a
+                                        function: for all values of n (to the right of n0) the value of
+                                        the function f (n) is between c1 · g(n) and c2 · g(n)
+                                       </p>
+                                       <p>
+                                           <b>
+                                               f(n) ∈ Θ(g(n)) if lim n→∞  f(n)/g(n) is a nonzero constant (and not ∞)
+                                               </b>
+                                       </p>
+
+                        </span></div>
+                    </li>
+                </ul>
+             </span></div>
+        </li>
+
+        <!-- Lecture 2 -->
+        <li> 
+            <div class="collapsible-header"> <a href= "http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture02.pdf"> Lecture 2 </a>
+                </div>
+
+
+
+    </ul>
+
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-copyright">
+          <div class="container">
+          ©2020 created by Vidám Szabolcs
+          <a class="grey-text text-lighten-4 right" href="https://github.com/SirVsbi/SirVsbi.github.io">Source code</a>
+          </div>
+        </div>
+      </footer>
+
+
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, {accordion: false});
+        });
+    </script>
 </body>
 
 
@@ -69,61 +163,4 @@ the function f (n) is on or above c · g(n)
 
 
 
-<style>
-    .collapsible {
-      background-color: #777;
-      color: white;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 15px;
-    }
-    
-    .active, .collapsible:hover {
-      background-color: #555;
-    }
-    
-    .collapsible:after {
-      content: '\002B';
-      color: white;
-      font-weight: bold;
-      float: right;
-      margin-left: 5px;
-    }
-    
-    .active:after {
-      content: "\2212";
-    }
-    
-    .content {
-      padding: 0 18px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-      background-color: #f1f1f1;
-    }
-    </style>
-
-
-
-
-
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-    
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight){
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-        } 
-      });
-    }
 </script>
