@@ -11,32 +11,115 @@
 
 <body>
     <h1> DSA Quick Reference </h1>
-
-
-    <a href = http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture01.pdf> Lecture 1 </a>
+    <p>
+        Click on lecture button for dropdown. Click on the link (Lecture 1..14) to open that lecture's pdf in a new window
+    </p>
+    <button class="collapsible"><a  target="_blank" rel="noopener noreferrer" href = http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture01.pdf> Lecture 1 </a></button>
+    <div class="content">
     <ul>
         <li>Abstract data type definition</li>
         <li>Pseudocode</li>
-        <li>Complexity definititions/calculations
+        <li><h2>Complexity definititions/calculations</h2>
             <p>
                 Each simple operation (+, -, *, /, =, if, function call) takes
 one time step/unit.
             </p>
+        <p>
+            T(n) = the number of steps 
+        </p>
+        We are not interested in the exact number of steps for a given
+        algorithm, we are interested in its order of growth (i.e., how
+        does the number of steps change if the value of n increases)
             <h3> O notation</h3>
             <p>
-The O-notation provides an asymptotic upper bound for a
+The O-notation provides an asymptotic <b>upper</b> bound for a
 function: for all values of n (to the right of n0) the value of
 the function f (n) is on or below c · g(n)
             </p>
-            f(n) ∈ O(g(n)) if lim n→∞ f(n)/g(n) is 0 or a constant (but not ∞)
+            <b>f(n) ∈ O(g(n)) if lim n→∞ f(n)/g(n) is 0 or a constant (but not ∞) </b>
            
             <h3> Ω-notation </h3>
+            <p>
+                The Ω-notation provides an asymptotic <b>lower</b> bound for a
+function: for all values of n (to the right of n0) the value of
+the function f (n) is on or above c · g(n)
+            </p>
+           <b>f(n) ∈ Ω(g(n)) if lim n→∞  f(n)/g(n) is ∞ or a nonzero constant.</b> 
+       
+       
         </li>
     </ul>
 
 
-
+</div>
     
     <a href= "http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture02.pdf"> Lecture 2 </a>
 
 </body>
+
+
+
+
+
+
+
+
+
+<style>
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+    
+    .collapsible:after {
+      content: '\002B';
+      color: white;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    .active:after {
+      content: "\2212";
+    }
+    
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #f1f1f1;
+    }
+    </style>
+
+
+
+
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+</script>
