@@ -59,21 +59,152 @@
                 <ul class="collapsible popout">
                     <!-- ADT definition -->
                     <li>
-                        <div class="collapsible-header"><h2>Abstract data type definitions</h2></div>
+                        <div class="collapsible-header"><h2><a target="_blank" rel="noopener noreferrer" href="http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture01.pdf#page=14">Abstract data type definitions(pg 14)</a></h2></div>
                         <div class="collapsible-body"><span>
-                            <p> asd test</p>
+
+                            <h3>ADT: </h3>
+                           <ul class="browser-default">
+                            <li>
+                                A data type is a set of values (domain of the data type) and a
+set of operations on those values 
+                            </li>
+                            <li>
+                                the objects from the domain of the ADT are specified
+independently of their representation. The domain of an ADT describes what elements belong to
+this ADT.
+                            </li>
+                            <li>
+                                the operations of the ADT are specified independently of their
+implementation
+                            </li>
+                            <li>
+                                The set of all operations for an ADT is called its interface. The interface of an ADT contains the signature of the
+                                operations, together with their input data, results,
+                                preconditions and postconditions (but no detail regarding the
+                                implementation of the method).
+
+                            </li>
+                           </ul>
+
+                           <h3>Containers</h3>
+                           <b>Different containers are defined based on different properties:</b>
+                           <ul class="browser-default">
+                            <li>
+                                do the elements need to be unique?
+                            </li>
+                                <li>do the elements have positions assigned?</li>
+                                <li>can any element be accessed or just some specific ones?</li>
+                                <li>do we store simple elements or key - value pairs?</li>
+                           </ul>
+                           <b>A container should provide at least the following operations:</b>
+                           <ul class = "browser-default">
+                            <li>creating an empty container (constructor)</li>
+                            <li>adding a new element to the container</li>
+                            <li>removing an element from the container</li>
+                            <li>returning the number of elements in the container</li>
+                            <li>provide access to the elements from the container (usually
+                                using an iterator)</li>
+                           </ul>
+
+                           <h3> Advantages to use ADTs</h3>
+                           <ul class = "browser-default">
+                                <li>Abstraction is defined as the separation between the
+                                    specification of an object (its domain and interface) and its
+                                    implementation.</li>
+                                <li>Encapsulation - abstraction provides a promise that any
+                                    implementation of an ADT will belong to its domain and will
+                                    respect its interface. And this is all that is needed to use an
+                                    ADT.</li>
+                                <li>Localization of change - any code that uses an ADT is still
+                                    valid if the ADT changes (because no matter how it changes,
+                                    it still has to respect the domain and interface)</li>
+                                <li>Flexibility - an ADT can be implemented in different ways,
+                                    but all these implementation have the same interface.
+                                    Switching from one implementation to another can be done
+                                    with minimal changes in the code.</li>
+                            
+                           </ul>
                         </span></div>
                     </li>
                     <!-- Pseudocode -->
                     <li>
-                        <div class="collapsible-header"><h2>Pseudocode</h2></div>
+                        <div class="collapsible-header"><h2><a target="_blank" rel="noopener noreferrer" href="http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture01.pdf#page=34">Pseudocode cheatsheet(pg 34)</a></h2></div>
                         <div class="collapsible-body"><span>
-                            <p> asd test</p>
+                            <b>Pseudocode is not object oriented, so instead of varible.fun(param1, param2), write fun(variable, param1, param2)</b>
+                            <ul class = "browser-default">
+                                <li>non standard instruction: @instruction</li>
+                                <li>one line comment: //</li>
+                                <li>reading data: read</li>
+                                <li>printing data: print</li>
+                                <li>assignment: ←</li>
+                                <li>testing equality: = (single equation sign)</li>
+                                <b>Arrays:</b>
+                                <li>If we want to define a variable i of type Integer, we will write:
+                                    i : Integer</li>
+                                <li>If we want to define an array a, having elements of type T, we
+                                    will write: a : T[]</li>
+                                <li><b>Array indexing starts at 1</b></li>
+                                <b>Pointers:</b>
+                                <li>pointer:  ↑ </li>
+                                <li>pointer definition: p: ↑ Integer - p is a variable whose value is the address of a
+                                    memory location where an Integer value is stored.</li>
+                                <li>
+                                    The value from the address denoted by p is accessed using [p]
+                                </li>
+                                <li> allocation: allocate(p), de-allocation: free(p)</li>
+                                <li><b>We will use the special value NIL to denote an invalid address</b></li>
+                            </ul>
+
+                            <h4>if</h4>
+                            <code><pre>
+                            if condition then 
+                                @instructions   
+                            else    
+                                @instructions   
+                            end-if  
+                            </code></pre>
+
+
+                            <h4>while loop</h4>
+                            <code><pre>
+                            while condition execute
+                                @instructions
+                            end-while
+                            </pre></code>
+
+                            <h4>for loop</h4>
+                            <code><pre>
+                            for i ← init, final, step execute
+                                @instructions
+                            end-for
+                            </pre></code>
+                            step is optional, if not present it is considered as 1
+
+
+                            <h4>Subalgorithm (function without return value)</h4>
+                            <code><pre>
+                            <b>subalgorithm</b> name(formal parameter list) is:
+                                @instructions - subalgorithm body
+                            end-subalgorithm
+                            </pre></code>
+
+                            <h4>Function</h4>
+                            <code><pre>
+                            function name (formal parameter list) is:
+                                @instructions - function body
+                                name ← v //syntax used to return the value v
+                            end-function
+
+                                //and it can be called as: 
+                            result ← name (actual parameter list)
+                            </pre></code>
+                            
+                        
                         </span></div>
                     </li>
                     <!-- Complexity definitions/calculations-->
                     <li>
-                        <div class="collapsible-header"><a  target="_blank" rel="noopener noreferrer" href="http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture01.pdf#page=48"><h2>Complexity definititions/calculations</a></h2></div>
+                        <div class="collapsible-header"><a  target="_blank" rel="noopener noreferrer" href="http://www.cs.ubbcluj.ro/~marianzsu/DSA/Lecture/Lecture01.pdf#page=48"><h2>Complexity definititions/calculations(pg 48)</a></h2></div>
                         <div class="collapsible-body"><span>
                                 <p>
                                         Each simple operation (+, -, *, /, =, if, function call) takes
@@ -85,6 +216,9 @@
                                     We are not interested in the exact number of steps for a given
                                     algorithm, we are interested in its order of growth (i.e., how
                                     does the number of steps change if the value of n increases)
+                                    <p>We will consider only the leading term of the formula (for
+                                        example n^2), because the other terms are relatively
+                                        insignificant for large values of n.</p>
                                         <h3> O notation</h3>
                                         <p>
                             The O-notation provides an asymptotic <b>upper</b> bound for a
